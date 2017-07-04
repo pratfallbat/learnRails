@@ -1,6 +1,8 @@
-Rails.application.routes.draw do
+ Rails.application.routes.draw do
 
   devise_for :users
+  resources :posts
+  
 #Define root url
 root 'pages#index'
 #Define Routes for Pages
