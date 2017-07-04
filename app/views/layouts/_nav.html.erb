@@ -1,12 +1,9 @@
 
       
 <% if user_signed_in? %>
-  <%= link_to "Log Out", destroy_user_session_path, class: "btn btn-default navbar-btn"  %>
+  <%= render '/layouts/nav_user' %>
  
 <% else %>
-  <%= link_to "Log In", new_user_session_path, class: "btn btn-default navbar-btn" %>
-  <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-default navbar-btn" %>
+   <%= render '/layouts/nav_guest' %>
 <% end %>
-
-<%= render '/layouts/nav_user' %>
 	

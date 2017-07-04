@@ -32,17 +32,19 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.username %> <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li role="separator" class="divider"></li>
-            <li><a href="/user/anony">Profile</a></li>
+            <li><a href="/user/<%= current_user.username   %>">Profile</a></li>
             <li role="separator" class="divider"></li>
              <li><%= link_to('Edit Profile', edit_user_registration_path) %></li>
             <li><a href="#">Help</a></li>
+             <li role="separator" class="divider"></li>
+            <li><%= link_to('Edit Profile', edit_user_registration_path) %></li>
+
             <li role="separator" class="divider"></li>
               <li><%= link_to('Log Out', destroy_user_session_path, :method => :delete) %></li>
           </ul>
         </li>
         
-         <li><%= link_to('Edit Profile', edit_user_registration_path) %></li>
-
+         
 
       </ul>
     </div><!-- /.navbar-collapse -->

@@ -12,4 +12,26 @@
  *
  */
 @import 'bootstrap-sprockets';
-@import 'bootstrap'
+@import 'bootstrap';
+
+$blue: #3bbfce;
+$margin: 16px;
+
+body {
+background: #000000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0f9b0f, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #0f9b0f, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  border-color: $blue;
+  color: darken($blue, 9%);
+}
+
+body {
+  padding: $margin / 2;
+  margin: $margin / 2;
+  border-color: $blue;
+}
+
+.a.btn-default navbar-btn{
+	  display: none;
+}
